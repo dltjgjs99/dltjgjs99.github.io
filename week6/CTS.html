@@ -1,0 +1,59 @@
+<!doctype html><!-- CTS.html -->
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>위스키종류</title>
+ 
+  <style>
+  h2{	display:block; font-size:1eml margin-top:1.33em; margin-bottom:1.33em; margin-left: 0;
+	margin-right: 0; font-weight:bold;}
+	#h2new {font-style; color:blue;}
+  </style>
+<h3>
+위스키의 종류
+</h3>
+
+
+  </head>
+  <body>
+  <section>
+  <fieldset>
+  <div>
+  <form name="form">
+  <select name="test" onchange="changes(document.form.test.value)">
+    <option value="">--위스키 --</option>
+    <option value="1">아이리쉬</option>
+    <option value="2">스카치</option>
+    <option value="3">버번</option>
+  </select>
+    <select name="test2">
+    <option>----</option>
+  </select>
+</form>
+</div>
+<script type="text/javascript">
+  function changes(fr) {
+    if(fr==1) {
+    num = new Array("제임슨","제이엔비");
+    vnum = new Array("1","2","3");
+    } else if(fr==2) {
+      num = new Array("조니워커","벨즈","서 에드위드","발렌타인");
+    vnum = new Array("1","2","3");
+    }
+    else if(fr==3) {
+      num = new Array("짐빔","메이커스 마크","잭 다니엘(캔터키)");
+    vnum = new Array("1","2","3");
+    }
+  for(i=0; i<form.test2.length; i++) {
+    form.test2.options[0] = null;
+  }
+  for(i=0;i < num.length;i++) {
+    document.form.test2.options[i] = new Option(num[i],vnum[i]);
+  }
+}
+</script>
+</fieldset>
+</section>
+</body>
+</html>
